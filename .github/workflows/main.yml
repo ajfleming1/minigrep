@@ -12,6 +12,7 @@ jobs:
           ref: dev
       - name: Reset dev branch
         run: |
+          # Set 'this' qa branch to exactly match the remote qa branch
           git fetch origin qa:qa
           git reset --hard qa
       - name: Create Pull Request
